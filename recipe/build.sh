@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 export CXXFLAGS="-std=c++11 $CXXFLAGS"
-./autogen.sh
+autoreconf -i -W all
 ./configure --prefix=${PREFIX}
 make -j${CPU_COUNT}
 # tests fail in last stable release
