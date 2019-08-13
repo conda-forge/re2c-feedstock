@@ -1,5 +1,5 @@
 {% set name = "re2c" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.gz
-  sha256: 856597337ea00b24ce91f549f79e6eece1b92ba5f8b63292cad66c14ac7451cf
+  url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.xz
+  sha256: 1a4cd706b5b966aeffd78e3cf8b24239470ded30551e813610f9cd1a4e01b817
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   home: http://re2c.org
   license: Public Domain
   license_family: PUBLIC-DOMAIN
-  license_file: README
+  license_file: LICENSE
   summary: 'Lexer generator for C/C++ '
   doc_url: http://re2c.org/manual/manual.html
   dev_url: https://github.com/skvadrik/re2c
