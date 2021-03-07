@@ -15,6 +15,7 @@ build:
 
 requirements:
   build:
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}           # [unix]
     - {{ compiler('cxx') }}         # [unix]
     - {{ compiler('m2w64_c') }}     # [win]
