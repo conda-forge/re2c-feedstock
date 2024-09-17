@@ -11,17 +11,19 @@ source:
   sha256: 0ac299ad359e3f512b06a99397d025cfff81d3be34464ded0656f8a96676c029
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - gnuconfig  # [unix]
     - {{ compiler('c') }}           # [unix]
+    - {{ stdlib("c") }}             # [unix]
     - {{ compiler('cxx') }}         # [unix]
     - {{ compiler('m2w64_c') }}     # [win]
+    - {{ stdlib("m2w64_c") }}       # [win]
     - {{ compiler('m2w64_cxx') }}   # [win]
     - {{ posix }}make
-    - posix                         # [win]
+    - m2-base                         # [win]
 
 test:
   commands:
