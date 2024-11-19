@@ -11,7 +11,7 @@ source:
   sha256: 6281c6bf52e684d5727ac293667c8031a4aa9010636512da5aee45f19987c1ee
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -23,7 +23,7 @@ requirements:
     - {{ stdlib("m2w64_c") }}       # [win]
     - {{ compiler('m2w64_cxx') }}   # [win]
     - {{ posix }}make
-    - posix                         # [win]
+    - m2-base                         # [win]
 
 test:
   commands:
