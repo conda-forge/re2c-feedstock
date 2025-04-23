@@ -1,5 +1,5 @@
 {% set name = "re2c" %}
-{% set version = "4.0.2" %}
+{% set version = "4.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.xz
-  sha256: 5e52ce0e26326115e41bc45d34dc2d5e10f2e44ed3a413fa2a826aa3500c8d56
+  sha256: c9dc2b24f340d135a07a1ac63ff53f7f8f74997fed5a4e9132a64050dbc3da1f
 
 build:
   number: 0
