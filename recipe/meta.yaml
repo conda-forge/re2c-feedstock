@@ -16,6 +16,9 @@ requirements:
   build:
     - cmake
     - ninja
+    - python
+    - diffutils  # [not win]
+    - m2-diffutils  # [win]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
