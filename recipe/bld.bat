@@ -6,7 +6,7 @@ if errorlevel 1 exit 1
 cmake --build build
 if errorlevel 1 exit 1
 
-ctest --test-dir build --output-on-failure
+cmake --build build --target check_re2c
 if errorlevel 1 exit 1
 
 cmake --build build --target install
