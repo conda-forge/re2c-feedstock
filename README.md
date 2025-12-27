@@ -7,7 +7,7 @@ Home: http://re2c.org
 
 Package license: Public Domain
 
-Summary: Lexer generator for C/C++ 
+Summary: Lexer generator for C/C++
 
 Development: https://github.com/skvadrik/re2c
 

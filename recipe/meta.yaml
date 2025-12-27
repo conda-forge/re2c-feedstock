@@ -1,9 +1,8 @@
 {% set name = "re2c" %}
 {% set version = "4.4" %}
-{% set posix = 'm2-' if win else '' %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
@@ -11,19 +10,15 @@ source:
   sha256: 6b6b865924447ef992d5db4e52fb9307e5f65f26edd43efa91395da810f4280a
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-    - gnuconfig  # [unix]
-    - {{ compiler('c') }}           # [unix]
-    - {{ stdlib("c") }}             # [unix]
-    - {{ compiler('cxx') }}         # [unix]
-    - {{ compiler('m2w64_c') }}     # [win]
-    - {{ stdlib("m2w64_c") }}       # [win]
-    - {{ compiler('m2w64_cxx') }}   # [win]
-    - {{ posix }}make
-    - m2-base                         # [win]
+    - cmake
+    - ninja
+    - {{ compiler('c') }}
+    - {{ stdlib("c") }}
+    - {{ compiler('cxx') }}
 
 test:
   commands:
@@ -34,7 +29,7 @@ about:
   license: Public Domain
   license_family: PUBLIC-DOMAIN
   license_file: LICENSE
-  summary: 'Lexer generator for C/C++ '
+  summary: 'Lexer generator for C/C++'
   doc_url: http://re2c.org/manual/manual.html
   dev_url: https://github.com/skvadrik/re2c
 
